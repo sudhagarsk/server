@@ -15,9 +15,8 @@ app.get('/', (req, res) => {
 app.listen(8080, () => {
     console.log("Server Connected");
 });
-
 // Connect MongoDB
-mongoose.connect('mongodb+srv://sudhagar:sudhagar1234@cluster0.pnulv.mongodb.net/bank')
+mongoose.connect('mongodb://127.0.0.1:27017/bankDB')
     .then(() => {
         console.log("DB CONNECTED");
     })
@@ -139,5 +138,6 @@ app.post("/data/withdraw", async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 });
+
 
 
