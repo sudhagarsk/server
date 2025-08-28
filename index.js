@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Create a root path
 app.get('/', (req, res) => {
-    res.send('Welcome');
+    res.send('<h1>Welcome</h1>');
 });
 
 // Start server
@@ -138,6 +138,7 @@ app.post("/data/withdraw", async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 });
+
 
 
 
