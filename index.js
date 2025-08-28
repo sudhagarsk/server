@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 // ✅ Connect MongoDB
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect('mongodb://127.0.0.1:27017/bankDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -129,3 +129,4 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
